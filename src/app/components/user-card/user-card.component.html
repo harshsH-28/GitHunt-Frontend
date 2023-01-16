@@ -1,0 +1,30 @@
+<div class="flex mt-20 mb-20 flex-col items-center">
+  <div>
+    <div class="flex justify-center items-center">
+      <img
+        class="rounded-[25em] w-[15em] mr-20"
+        src="{{ user.avatar_url }}"
+        alt="User Image"
+      />
+      <div class="flex-1">
+        <p class="text-3xl font-semibold mb-4">{{ user.name }}</p>
+        <p class="mb-2 break-words">
+          {{ user.bio }}
+        </p>
+        <p class="mb-2">{{ user.location }}</p>
+        <div *ngIf="user.twitter_username" class="flex">
+          <p class="mb-2 mr-3">Twitter:</p>
+          <p>
+            {{ user.twitter_username }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex mt-10 mr-[17em]">
+    <p class="mr-3">Profile Link:</p>
+    <a href="{{ user.html_url }}" target="_blank" rel="noopener noreferrer">{{
+      user.html_url
+    }}</a>
+  </div>
+</div>
