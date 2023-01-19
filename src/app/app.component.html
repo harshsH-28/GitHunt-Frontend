@@ -38,7 +38,15 @@
       </div>
     </div>
   </div>
-  <div *ngIf="user">
+  <div *ngIf="notFound" class="flex justify-center items-center mt-20">
+    <img
+      src="../assets/5203299-removebg-preview.png"
+      alt="Not Found"
+      width="500px"
+      height="500px"
+    />
+  </div>
+  <div *ngIf="!notFound && user">
     <app-user-card [user]="user"></app-user-card>
     <div
       *ngFor="

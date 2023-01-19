@@ -13,7 +13,7 @@
         </p>
         <p class="mb-2">{{ user.location }}</p>
         <div *ngIf="user.twitter_username" class="flex">
-          <p class="mb-2 mr-3">Twitter:</p>
+          <p class="mb-2 mr-3 font-semibold">Twitter:</p>
           <p>
             {{ user.twitter_username }}
           </p>
@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="flex mt-10 mr-[17em]">
-    <p class="mr-3">Profile Link:</p>
+    <p class="mr-3 font-semibold">Profile Link:</p>
     <a href="{{ user.html_url }}" target="_blank" rel="noopener noreferrer">{{
       user.html_url
     }}</a>

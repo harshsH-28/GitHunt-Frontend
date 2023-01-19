@@ -1,11 +1,13 @@
-<div
-  class="w-[40em] p-6 bg-white border border-gray-200 rounded-lg shadow-md mr-20 mb-20"
->
-  <h5 class="mb-2 text-xl font-bold tracking-tight text-black">
-    {{ repoData.name }}
-  </h5>
-  <p class="mb-3 text-base font-normal text-gray-900">
-    {{ repoData.desc }}
-  </p>
-  <app-topic [lang]="repoData.languages"></app-topic>
-</div>
+<a href="{{ repoData.url }}" target="_blank" rel="noopener noreferrer">
+  <div
+    class="w-[40em] p-6 bg-white border border-gray-200 rounded-lg shadow-md mr-20 mb-20 hover:w-[40.5em] transition-all ease-in-out"
+  >
+    <h5 class="mb-2 text-xl font-bold tracking-tight text-black">
+      {{ repoData.name }}
+    </h5>
+    <p class="mb-3 text-base font-normal text-gray-900">
+      {{ repoData.desc }}
+    </p>
+    <app-topic [lang]="repoData.languages"></app-topic>
+  </div>
+</a>

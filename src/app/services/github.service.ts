@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class GithubService {
   constructor(private http: HttpClient) {}
   github(user: any) {
-    return this.http.get(`https://githunt-backend.onrender.com/api/${user}`);
+    return this.http.get(`http://localhost:8000/api/${user}`);
   }
 }
+// https://githunt-backend.onrender.com/api/
